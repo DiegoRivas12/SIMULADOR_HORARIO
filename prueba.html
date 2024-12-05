@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horario Ajustado</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Horario Ajustado</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>HORA</th>
+                <th>LUNES</th>
+                <th>MARTES</th>
+                <th>MIÉRCOLES</th>
+                <th>JUEVES</th>
+                <th>VIERNES</th>
+                <th>SÁBADO</th>
+                <th>DOMINGO</th>
+            </tr>
+        </thead>
+        <tbody id="schedule-body">
+            <!-- El contenido será generado dinámicamente -->
+        </tbody>
+    </table>
+    <script>
+        // Datos de los cursos con días
+        const cursos = [
+            { curso: "CURSO A", inicio: "07:00", fin: "09:00", dia: "LUNES" },
+            { curso: "CURSO B", inicio: "07:20", fin: "09:20", dia: "LUNES" },
+            { curso: "CURSO C", inicio: "9:10", fin: "12:00", dia: "MARTES" }
+        ];
+
+        // Días de la semana
+        const diasSemana = ["LUNES", "MARTES", "MIÉRCOLES", "JUEVES", "VIERNES", "SÁBADO", "DOMINGO"];
+
+        // Función para convertir HH:MM a minutos totales
+        function convertirAMinutos(hora) {
+            const [h, m] = hora.split(":").map(Number);
+            return h * 60 + m;
+        }
+
+        // Función para convertir minutos totales a HH:MM
+        function convertirAHora(minutos) {
+            const h = Math.floor(minutos / 60);
+            const m = minutos % 60;
+            return `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}`;
+        }
+
+        // Filtrar y dividir franjas horarias por día y solapamientos
+        function dividirFranjasPorDia(cursos, dia) {
+            const cursosDelDia = cursos.filter(c => c.dia === dia);
+
+            if (cursosDelDia.length === 0) return [];
+
+            const eventos = [];
+            cursosDelDia.forEach(({ curso, inicio, fin }) => {
+                eventos.push({ tiempo: convertirAMinutos(inicio), curso, tipo: "inicio" });
+                eventos.push({ tiempo: convertirAMinutos(fin), curso, tipo: "fin" });
+            });
+
+            eventos.sort((a, b) => a.tiempo - b.tiempo);
+
+            const resultado = [];
+            const activos = new Set();
+            let inicioIntervalo = eventos[0].tiempo;
+
+            for (let i = 0; i < eventos.length; i++) {
+                const { tiempo, curso, tipo } = eventos[i];
+
+                if (tiempo > inicioIntervalo) {
+                    const cursosActivos = Array.from(activos).join(" / ");
+                    resultado.push({ inicio: convertirAHora(inicioIntervalo), fin: convertirAHora(tiempo), cursos: cursosActivos });
+                    inicioIntervalo = tiempo;
+                }
+
+                if (tipo === "inicio") {
+                    activos.add(curso);
+                } else if (tipo === "fin") {
+                    activos.delete(curso);
+                }
+            }
+
+            return resultado;
+        }
+
+        // Generar filas de la tabla
+        function generarTabla() {
+            const tbody = document.getElementById("schedule-body");
+
+            diasSemana.forEach(dia => {
+                const franjas = dividirFranjasPorDia(cursos, dia);
+
+                franjas.forEach(({ inicio, fin, cursos }) => {
+                    const fila = document.createElement("tr");
+
+                    // Crear una fila con columnas vacías excepto la del día correspondiente
+                    let columnas = `<td>${inicio} - ${fin}</td>`;
+                    for (const d of diasSemana) {
+                        columnas += d === dia ? `<td>${cursos}</td>` : "<td></td>";
+                    }
+
+                    fila.innerHTML = columnas;
+                    tbody.appendChild(fila);
+                });
+            });
+        }
+
+        // Generar la tabla al cargar la página
+        generarTabla();
+    </script>
+</body>
+</html>
