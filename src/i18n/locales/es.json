@@ -1,0 +1,216 @@
+{
+	"degree-selector": {
+		"title": "Elige un título",
+		"noOptions": "No hay opciones disponibles"
+	},
+	"course-selector": {
+		"title": "Elige las asignaturas",
+		"noOptions": "No hay opciones, puede que necesites seleccionar otro título o semestre"
+	},
+	"link-button": {
+		"tooltip": "Obtener enlace para compartir"
+	},
+	"language-button": {
+		"tooltip": "Cambiar el idioma"
+	},
+	"darkmode-button": {
+		"dark": "Cambiar a modo claro",
+		"light": "Cambiar a modo oscuro"
+	},
+	"multishiftmode-switch": "Permitir elegir múltiples turnos del mismo tipo/asignatura",
+	"help-button": {
+		"tooltip": "Ayuda"
+	},
+	"settings-dialog": {
+		"title": "Elige el semestre",
+		"select": {
+			"label": "Semestre",
+			"value": "er Semestre",
+			"value_plural": "o Semestre"
+		},
+		"occupancy-update": {
+			"label": "Intervalo de actualización de la ocupación de los turnos",
+			"warning": "Elige el intervalo para actualizar la ocupación de los turnos."
+		},
+		"actions": {
+			"close-button": "Cancelar"
+		}
+	},
+	"timetable-dialog": {
+		"title": "Añadir nuevo horario",
+		"chosen-term": "Semestre elegido:",
+		"timetable-name": "Nombre del horario",
+		"copy-of": "Copia de:",
+		"preview-warning": "Al cambiar el semestre, se creará un nuevo horario.",
+		"warning": "Cambiar el semestre creará un nuevo horario, elige su nombre.",
+		"errors": {
+			"not-empty": "Este campo no puede estar vacío.",
+			"already-exists": "Este nombre ya está en uso."
+		},
+		"actions": {
+			"cancel": "Cancelar",
+			"save": "Guardar"
+		}
+	},
+	"confirm-delete-timetable-dialog": {
+		"title": "Eliminar horario",
+		"content": "¿Deseas eliminar el horario con el nombre: {{timetable}}?",
+		"actions": {
+			"cancel": "Cancelar",
+			"confirm": "Confirmar"
+		}
+	},
+	"help-dialog": {
+		"actions": {
+			"close-button": "Volver"
+		}
+	},
+	"classes-dialog": {
+		"title": "Clases para la Inscripción",
+		"minimal-classes": "Conjunto mínimo de clases",
+		"no-class": "No hay clases disponibles para los títulos seleccionados",
+		"actions": {
+			"close-button": "Volver"
+		}
+	},
+	"changelog-dialog": {
+		"title": "Novedades",
+		"content": [
+			"- ¡Ahora puedes tener varios horarios guardados en la aplicación!",
+			"- Ahora puedes cambiar el color de una asignatura (temporalmente) haciendo clic en la asignatura correspondiente, debajo de los turnos seleccionados",
+			"- Al obtener las clases, encuentra el menor conjunto posible",
+			"- Descarga de un archivo de calendario con las clases seleccionadas",
+			"- Datos de ocupación del turno (no actualizados automáticamente)"
+		],
+		"actions": {
+			"back": "Volver"
+		}
+	},
+	"color-picker-dialog": {
+		"title": "Cambiar color de {{course}}",
+		"content": {
+			"preview": "Vista previa:"
+		},
+		"actions": {
+			"cancel": "Cancelar",
+			"save": "Guardar"
+		}
+	},
+	"schedule": {
+		"shift": {
+			"occupation": "Ocupación",
+			"capacity": "Capacidad"
+		}
+	},
+	"schedule-available": {
+		"title": "Turnos Disponibles"
+	},
+	"schedule-selected": {
+		"title": "Turnos Seleccionados",
+		"actions": {
+			"save-to-file": "Guardar horario en un archivo",
+			"get-classes": "Obtener clases para inscripciones",
+			"save-as-image": "Guardar como imagen",
+			"save-as-excel": "Guardar horario y clases en un archivo Excel",
+			"clear-schedule": "Limpiar horario",
+			"get-calendar": "Obtener archivo de calendario con las clases",
+			"duplicate-timetable": "Duplicar este horario"
+		}
+	},
+	"shift-scraper": {
+		"classes": {
+			"error": "No se pudieron obtener las clases para esta asignatura"
+		}
+	},
+	"footer": {
+		"support-button": {
+			"content": "Apoyar",
+			"tooltip": "Ayudar a mantener el sitio web"
+		},
+		"changelog-button": {
+			"content": "Novedades",
+			"tooltip": "Cambios del sitio web"
+		},
+		"repository": {
+			"tooltip": "Ver el código fuente"
+		},
+		"joao-david": {
+			"tooltip": "João David"
+		},
+		"daniel-goncalves": {
+			"tooltip": "Daniel Gonçalves"
+		}
+	},
+	"alert": {
+		"link-obtained": "¡Éxito! El enlace se copió en tu portapapeles",
+		"no-shift-selected": "No has seleccionado ningún turno, crea tu horario primero",
+		"schedule-to-image": "Horario convertido en imagen",
+		"schedule-to-excel": "Horario y clases convertidos en un archivo Excel",
+		"calendar-obtained": "Calendario descargado como archivo",
+		"cleared-schedule": "Horario limpiado con éxito",
+		"cannot-obtain-degrees": "No se pudieron obtener los títulos",
+		"cannot-obtain-courses": "No se pudieron obtener las asignaturas de este título",
+		"cannot-obtain-shifts": "No se pudieron obtener los turnos de esta asignatura",
+		"error-parsing": "Hubo errores al procesar. Por favor, contacta a los administradores.",
+		"deleted-timetable": "Horario eliminado con éxito",
+		"minimal-classes-no-degrees": "No has seleccionado ningún título. Selecciona al menos uno primero."
+	},
+	"warning": {
+		"title": "Advertencias: Calendario, Ocupación y Turnos con Títulos diferentes",
+		"content": [
+			"El archivo de calendario con las clases no se actualiza automáticamente, asegúrate de verificar en Fénix si alguna clase ha cambiado.",
+			"Los datos de ocupación de los turnos no son en tiempo real, recarga la página siempre que necesites conocer el valor real.",
+			"Algunos turnos de Fénix pertenecen a títulos que no corresponden con el seleccionado. Asegúrate de que la clase pertenece al título en el que deseas inscribirte utilizando la funcionalidad \"$t(schedule-selected.actions.get-classes)\"."
+		],
+		"actions": {
+			"continue": "Continuar",
+			"back": "Volver"
+		}
+	},
+	"new-domain": {
+		"title": "Nuevo dominio: {{domain}}",
+		"content": [
+			"Criador de Horários ahora tiene un nuevo dominio: {{domain}}.",
+			"El dominio anterior (horarios.dagoncalves.me) se mantendrá hasta el 10/09/2022.",
+			"Para acceder al nuevo dominio y mantener los datos, haz clic en el botón abajo."
+		],
+		"actions": {
+			"access": "Acceder",
+			"ignore": "Ignorar"
+		}
+	},
+	"excel": {
+		"filename": "ist-horario",
+		"worksheet-title": "Horario",
+		"generated-by": "Generado automáticamente por:"
+	},
+	"image": {
+		"filename": "ist-horario"
+	},
+	"table": {
+		"weekdays": ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"]
+	},
+	"calendar": {
+		"filename": "ist-horario"
+	},
+	"classType": {
+		"T": "Teórica",
+		"TP": "Teórico-Práctica",
+		"L": "Laboratorio",
+		"PB": "Problemas",
+		"P": "Prácticas",
+		"S": "Seminarios"
+	},
+	"language": {
+	"english": "Inglés",
+	"portuguese": "Português",
+	"spanish": "Español"
+	},
+	"add": "Añadir",
+	"timetable-autocomplete": {
+		"default-timetable": "Horario 1",
+		"add-new": "Añadir nuevo"
+	},
+	"unsaved": "No guardado",
+	"timetables": "Horarios"
+}

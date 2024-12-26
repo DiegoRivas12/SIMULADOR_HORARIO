@@ -1,0 +1,133 @@
+body {
+  /* Don't allow selection of text */
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  user-select: none;
+
+  @media (max-width: 400px) {
+	font-size: small !important;
+  }
+}
+
+.App {
+  // text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .schedules {
+	height: 100%;
+	grid-column: 1;
+	grid-row: 2;
+	display: flex;
+	flex-direction: row;
+
+	@media (max-width: 700px) {
+	  flex-direction: column;
+	}
+  }
+
+  .footer {
+	position: absolute;
+	bottom: 0;
+
+	.spacer {
+	  	flex: 1;
+		}
+	}
+}
+
+.alerts {
+  display:none;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.selected {
+	color: red;
+}
+
+// Remove color from current day of week
+.fc-day-today {
+	background-color:inherit !important;
+}
+
+// Allow break spaces in event's title
+.fc-event-title {
+	white-space: break-spaces;
+}
+
+.fc-timegrid-event-harness {
+	cursor: pointer;
+}
+
+.MuiToggleButtonGroup-grouped {
+	@media (max-width: 400px) {
+		margin-left: 4px !important;
+	}
+}
+
+// Issue with typography -> doesn't allow changing the weight in props
+.MuiTypography-h6 {
+	font-weight: 400 !important;
+}
+
+.MuiChip-label {
+	color: white !important;
+}
+
+
+
+// Reset
+ul {
+ margin: 0;
+}
+
+.imageSaver {
+	width: fit-content;
+	position: absolute;
+	top: -9000px;
+	left: -9000px;
+	z-index: -9000;
+	
+	table {
+		border-collapse: collapse;
+		// border-spacing: 1px;
+		border-width: thin;
+		text-align: center;
+		vertical-align: middle;
+		word-wrap: break-word;
+
+		&.dark {
+			background-color: #424242;
+			color: white;
+		}
+
+		th {
+			padding: 0 5px;
+			color: white;
+			background-color: #212121;
+			font-weight: 500;
+		}
+
+		td {
+			border: 1px solid gray;
+			border-top: transparent;
+			height: 20px;
+			min-width: 50px;
+			padding: 0 5px;
+		}
+	}
+}

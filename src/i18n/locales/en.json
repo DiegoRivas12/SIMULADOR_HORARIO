@@ -1,0 +1,216 @@
+{
+	"degree-selector": {
+		"title": "Choose a degree",
+		"noOptions": "No options available"
+	},
+	"course-selector": {
+		"title": "Choose the courses",
+		"noOptions": "No options, you might need to select another degree or academic term"
+	},
+	"link-button": {
+		"tooltip": "Get shareable link"	
+	},
+	"language-button": {
+		"tooltip": "Change the language"
+	},
+	"darkmode-button": {
+		"dark": "Set to light mode",
+		"light": "Set to dark mode"
+	},
+	"multishiftmode-switch": "Allow choosing multiple shifts of the same kind/course",
+	"help-button": {
+		"tooltip": "Help"
+	},
+	"settings-dialog": {
+		"title": "Choose the semester",
+		"select": {
+			"label": "Semester",
+			"value": "st Semester",
+			"value_plural": "nd Semester"
+		},
+		"occupancy-update": {
+			"label": "Shift occupancy update interval",
+			"warning": "Choose the interval to update the shift occupancies."
+		},
+		"actions": {
+			"close-button": "Cancel"
+		}
+	},
+	"timetable-dialog": {
+		"title": "Add new timetable",
+		"chosen-term": "Chosen term:",
+		"timetable-name": "Timetable name",
+		"copy-of": "Copy of:",
+		"preview-warning": "To change the semester, a new timetable will be created.",
+		"warning": "Changing semester will create a new timetable, please choose its name.",
+		"errors": {
+			"not-empty": "This field can't be empty.",
+			"already-exists": "This name is already being used."
+		},
+		"actions": {
+			"cancel": "Cancel",
+			"save": "Save"
+		}
+	},
+	"confirm-delete-timetable-dialog": {
+		"title": "Delete timetable",
+		"content": "Do you want to delete the timetable with the name: {{timetable}}",
+		"actions": {
+			"cancel": "Cancel",
+			"confirm": "Confirm"
+		}
+	},
+	"help-dialog": {
+		"actions": {
+			"close-button": "Back"
+		}
+	},
+	"classes-dialog": {
+		"title": "Classes for Enrolment",
+		"minimal-classes": "Minimum Set of Classes",
+		"no-class": "No classes available for the chosen degrees",
+		"actions": {
+			"close-button": "Back"
+		}
+	},
+	"changelog-dialog": {
+		"title": "Changelog",
+		"content": [
+			"- Now you can have multiple timetables stored in the application!",
+			"- You can now change the color of a course (temporarily), by clicking in the corresponding course, below the selected shifts",
+			"- When obtaining the classes, find the smallest set of classes possible",
+			"- Download of calendar with the selected shifts",
+			"- Occupation of the shift (not updated automatically)"
+		],
+		"actions": {
+			"back": "Back"
+		}
+	},
+	"color-picker-dialog": {
+		"title": "Change {{course}} color",
+		"content": {
+			"preview": "Preview:"
+		},
+		"actions": {
+			"cancel": "Cancel",
+			"save": "Save"
+		}
+	},
+	"schedule": {
+		"shift": {
+			"occupation": "Occupation",
+			"capacity": "Capacity"
+		}
+	},
+	"schedule-available": {
+		"title": "Available Shifts"
+	},
+	"schedule-selected": {
+		"title": "Selected Shifts",
+		"actions": {
+			"save-to-file": "Save schedule to a file",
+			"get-classes": "Get classes for enrolments",
+			"save-as-image": "Save as image",
+			"save-as-excel": "Save schedule and classes as Excel file",
+			"clear-schedule": "Clear schedule",
+			"get-calendar": "Obtain calendar file with the classes",
+			"duplicate-timetable": "Duplicate this timetable"
+		}
+	},
+	"shift-scraper": {
+		"classes": {
+			"error": "Could not fetch classes for this course"
+		}
+	},
+	"footer": {
+		"support-button": {
+			"content": "Support",
+			"tooltip": "Help maintain the website"
+		},
+		"changelog-button": {
+			"content": "Changelog",
+			"tooltip": "Website changelog"
+		},
+		"repository": {
+			"tooltip": "See the source code"
+		},
+		"joao-david": {
+			"tooltip": "João David"
+		},
+		"daniel-goncalves": {
+			"tooltip": "Daniel Gonçalves"
+		}
+	},
+	"alert": {
+		"link-obtained": "Success! The link was copied to your clipboard",
+		"no-shift-selected": "You haven't selected any shift, do your schedule first",
+		"schedule-to-image": "Schedule converted into a image",
+		"schedule-to-excel": "Schedule and classes converted into a excel file",
+		"calendar-obtained": "Calendar downloaded to a file",
+		"cleared-schedule": "Schedule cleared with success",
+		"cannot-obtain-degrees": "It was not possible to obtain the degrees",
+		"cannot-obtain-courses": "It was not possible to obtain the courses of this degree",
+		"cannot-obtain-shifts": "It was not possible to obtain the shifts of this course",
+		"error-parsing": "There were errors in parsing. Please contact the administrators.",
+		"deleted-timetable": "Successfully deleted schedule",
+		"minimal-classes-no-degrees": "You haven't selected a degree. Select at least one degree first."
+	},
+	"warning": {
+		"title": "Warnings: Calendar, Occupation and Shifts with different Degrees",
+		"content": [
+			"The file of the calendar with the classes is not updated automatically, make sure to verify every now and then on Fenix if any class has changed.",
+			"The shift's occupation data is not obtained in real time, so whenever you want to know the real value you need to reload the page.",
+			"Some shifts from Fenix belong to degrees that do not correspond to the one selected, make sure that the class belongs to the degree that you are going to enrol using the functionality \"$t(schedule-selected.actions.get-classes)\"."
+		],
+		"actions": {
+			"continue": "Continue",
+			"back": "Back"
+		}
+	},
+	"new-domain": {
+		"title": "New domain: {{domain}}",
+		"content": [
+			"Criador de Horários now has a new domain: {{domain}}.",
+			"The previous domain where you are at (horarios.dagoncalves.me) will be maintained until 10/09/2022.",
+			"To access the new domain and keep the data, click on the button below."
+		],
+		"actions": {
+			"access": "Access",
+			"ignore": "Ignore"
+		}
+	},
+	"excel": {
+		"filename": "ist-schedule",
+		"worksheet-title": "Schedule",
+		"generated-by": "Generated automatically by:"
+	},
+	"image": {
+		"filename": "ist-schedule"
+	},
+	"table": {
+		"weekdays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+	},
+	"calendar": {
+		"filename": "ist-schedule"
+	},
+	"classType": {
+		"T": "Theoretical",
+		"TP": "Theoretical and Practical",
+		"L": "Laboratory",
+		"PB": "Problems",
+		"P": "Pratices",
+		"S": "Seminars"
+	},
+	"language": {
+	"english": "English",
+	"portuguese": "Portuguese",
+	"spanish": "Spanish"
+	},
+	"add": "Add",
+	"timetable-autocomplete": {
+		"default-timetable": "Timetable 1",
+		"add-new": "Add new"
+	},
+	"unsaved": "Unsaved",
+	"timetables": "Timetables"
+}

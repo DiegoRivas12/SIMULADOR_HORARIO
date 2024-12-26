@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  criador-horarios:
+    container_name: criador-horarios-node
+    build:
+      dockerfile: docker/development/Dockerfile
+      context: .
+    image: criador-horarios
+    stdin_open: true
+    tty: true
+    volumes:
+      - $HOME/.ssh:/project/docker/development/home/.ssh
+      - .:/project
+    ports:
+      - 3000:3000
