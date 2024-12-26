@@ -22,14 +22,9 @@ import { faPaypal } from '@fortawesome/free-brands-svg-icons'
 
 const CREATORS = [
 	{
-		name: 'João David',
+		name: 'Diego Rivas',
 		url: 'https://github.com/DiegoRivas12',
-		image: 'joao.png'
-	},
-	{
-		name: 'Daniel Gonçalves',
-		url: 'https://dang.pt',
-		image: 'daniel.png',
+		image: 'diego.png'
 	}
 ]
 
@@ -65,7 +60,7 @@ function Footer () : JSX.Element {
 					</Tooltip>
 					<div className={styles.grow} />
 					<Tooltip title={i18next.t('footer.repository.tooltip') as string}>
-						<Link href="https://github.com/joaocmd/Criador-Horarios" target="_blank" color="inherit">
+						<Link href="https://github.com/DiegoRivas12/SIMULADOR_HORARIO.git" target="_blank" color="inherit">
 							<IconButton color="inherit" onClick={() => {return}} component="span">
 								<GitHubIcon />
 							</IconButton>
